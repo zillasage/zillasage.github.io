@@ -1,0 +1,11 @@
+CHIKE_TRANSPO_EXPENSES <- read.table("~/CHIKE_TRANSPO_EXPENSES.txt", quote="\"")
+CHIKE_TRANSPO_REMAINDER <- read.table("~/CHIKE_TRANSPO_REMAINDER.txt", quote="\"")
+CHIKE_TRANSPO_TOTAL_RETURNS <- read.table("~/CHIKE_TRANSPO_TOTAL_RETURNS.txt", quote="\"")
+chke_ttranspo_data <- cbind(CHIKE_TRANSPO_EXPENSES,CHIKE_TRANSPO_REMAINDER,CHIKE_TRANSPO_TOTAL_RETURNS)
+names(chke_ttranspo_data) <- c("EXPENSES","REMAINDER","TOTAL_RETURNS")
+chke_ttranspo_data
+describe(chke_ttranspo_data)
+library(psych)
+describe(chke_ttranspo_data)
+summary(chke_ttranspo_data)
+str(chke_ttranspo_data)
